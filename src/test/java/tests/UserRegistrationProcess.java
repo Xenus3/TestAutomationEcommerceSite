@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import pages.CreateAnAccountPage;
 import pages.LoginPage;
 import pages.MainPage;
-import pages.MyAccountPage;
+import pages.myAccountPage;
 import util.BrowserFactory;
 import util.ExcelReader;
 
@@ -54,13 +54,13 @@ public class UserRegistrationProcess {
 		String alias = reader.getCellData("Sheet3", "alias", 2);
 
 		MainPage MainP = PageFactory.initElements(driver, MainPage.class);
-		MainP.ClickOnSignInButton();
+		MainP.clickOnSignInButton();
 
 		LoginPage LoginP = PageFactory.initElements(driver, LoginPage.class);
 		// 3. Enter your email address in 'Create and account' section.
-		LoginP.Fill_CreatAccountEmail_Field();
+		LoginP.fillCreatAccountEmailField();
 		// 4. Click on Create an Account button.
-		LoginP.Click_CreateAnAccount_Button();
+		LoginP.clickCreateAnAccountButton();
 
 		CreateAnAccountPage CreateAcc = PageFactory.initElements(driver, CreateAnAccountPage.class);
 		// 5. Enter your Personal Information, Address and Contact info.
@@ -75,18 +75,18 @@ public class UserRegistrationProcess {
 		CreateAcc.Click_SpecialOffer_CheckBox();
 		CreateAcc.Fill_Address_Company_Field(Company);
 		CreateAcc.Fill_Address1_Field(Address);
-		CreateAcc.Fill_City_Field(City);
-		CreateAcc.Select_State_Field(State);
-		CreateAcc.Fill_ZipCode_Field(ZipCode);
-		CreateAcc.Select_Country_Field(Country);
-		CreateAcc.Fill_CellPhone_Field();
-		CreateAcc.Fill_AliasAddress_Field(alias);
+		CreateAcc.fillCityField(City);
+		CreateAcc.selectStateField(State);
+		CreateAcc.fillZipCodeField(ZipCode);
+		CreateAcc.selectCountryField(Country);
+		CreateAcc.fillCellPhoneField();
+		CreateAcc.fillAliasAddressField(alias);
 		// 6. Click on Register button.
-		CreateAcc.Click_Register_Button();
+		CreateAcc.clickRegisterButton();
 
 		// 7. Validate that user is created.
-		MyAccountPage MyAccP = PageFactory.initElements(driver, MyAccountPage.class);
-		MyAccP.Assert_NameOnAccount(FirstName, LastName);
+		myAccountPage MyAccP = PageFactory.initElements(driver, myAccountPage.class);
+		MyAccP.assertNameOnAccount(FirstName, LastName);
 	}
 
 	// Closing browser

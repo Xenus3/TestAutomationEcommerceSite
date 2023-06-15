@@ -16,59 +16,59 @@ public class ProductPage extends BasePage {
 
 	// Element Library
 	@FindBy(how = How.XPATH, using = "//input[@id='quantity_wanted']")
-	WebElement Quantity_Wanted;
+	WebElement quantityWanted;
 	@FindBy(how = How.XPATH, using = "//select[@id='group_1']")
-	WebElement Size_Selection;
+	WebElement sizeSelection;
 	@FindBy(how = How.XPATH, using = "//a[@id='color_14']")
-	WebElement Select_Color;
+	WebElement selectColor;
 	@FindBy(how = How.XPATH, using = "//p[@id='add_to_cart']/button")
-	WebElement AddToCart_Button;
+	WebElement addToCartButton;
 	@FindBy(how = How.XPATH, using = "//*[@id='layer_cart']/div[1]/div[2]/div[4]/a")
-	WebElement ProceedToCheckout_Button;
+	WebElement proceedToCheckoutButton;
 	@FindBy(how = How.XPATH, using = "//a[@class='cart_quantity_up btn btn-default button-plus']")
-	WebElement IncreaseQuantity_Button;
+	WebElement increaseQuantityButton;
 	@FindBy(how = How.XPATH, using = "//td[@class='cart_total']//span")
-	WebElement TotalProductPrice;
+	WebElement totalProductPrice;
 	@FindBy(how = How.XPATH, using = "//td[@data-title='Unit price']//span//span")
-	WebElement ProductPrice;
+	WebElement productPrice;
 
 	// InteractiveMethods
-	public void Enter_Quantity(String quantity) {
-		Quantity_Wanted.clear();
-		Quantity_Wanted.sendKeys(quantity);
+	public void enterQuantity(String quantity) {
+		quantityWanted.clear();
+		quantityWanted.sendKeys(quantity);
 	}
 
-	public void Select_Size(String Size) {
-		SelectFromDropdownByVisibleText(Size_Selection, Size);
+	public void selectSize(String size) {
+		selectFromDropdownByVisibleText(sizeSelection, size);
 	}
 
-	public void Select_Color() {
-		Select_Color.click();
+	public void selectColor() {
+		selectColor.click();
 	}
 
-	public void Click_AddToCart_Button() {
-		AddToCart_Button.click();
+	public void clickAddToCartButton() {
+		addToCartButton.click();
 	}
 
-	public void Click_ProceedToCheckout_Button() {
-		ProceedToCheckout_Button.click();
+	public void clickProceedToCheckoutButton() {
+		proceedToCheckoutButton.click();
 	}
 
-	public void Click_IncreaseQuantity_Button() {
-		IncreaseQuantity_Button.click();
+	public void clickIncreaseQuantityButton() {
+		increaseQuantityButton.click();
 	}
 
-	public void TestTotalCalculation() throws InterruptedException {
+	public void testTotalCalculation() throws InterruptedException {
 
-		double DblCurrentTotal = ConvertStringToDouble(TotalProductPrice);
+		double DblCurrentTotal = convertStringToDouble(totalProductPrice);
 		
-		Click_IncreaseQuantity_Button();
+		clickIncreaseQuantityButton();
 		
-		double DblProductPrc = ConvertStringToDouble(ProductPrice);
+		double DblProductPrc = convertStringToDouble(productPrice);
 
 		Thread.sleep(2000);
 
-		double DblModifiedTotal = ConvertStringToDouble(TotalProductPrice);
+		double DblModifiedTotal = convertStringToDouble(totalProductPrice);
 		
 		if (DblCurrentTotal + DblProductPrc == DblModifiedTotal) {
 			System.out.println("Success! the calculation is correct");

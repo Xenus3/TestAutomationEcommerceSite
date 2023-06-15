@@ -7,11 +7,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class MyAccountPage {
+public class myAccountPage {
 
 	WebDriver driver;
 
-	public MyAccountPage(WebDriver driver) {
+	public myAccountPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
@@ -26,12 +26,12 @@ public class MyAccountPage {
 	WebElement NameOnAccount;
 
 	//InteractiveMethods
-	public void Hover_Over_Women_Button() {
+	public void hoverOverWomenButton() {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(Women_Button).perform();
 	}
 
-	public void Click_Tshirts_Button() {
+	public void clickTshirtsButton() {
 		Tshirts_Button.click();
 	}
 
@@ -39,9 +39,9 @@ public class MyAccountPage {
 		OrderHistoryAndDetails_Button.click();
 	}
 	
-	public void Assert_NameOnAccount(String FirstName, String LastName) {
-		String FullName = FirstName + " " + LastName;
-		assertEquals(FullName, NameOnAccount.getText());
+	public void assertNameOnAccount(String firstName, String LastName) {
+		String fullName = firstName + " " + LastName;
+		assertEquals(fullName, NameOnAccount.getText());
 	}
 
 	private void assertEquals(String fullName, String text) {
