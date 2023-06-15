@@ -10,8 +10,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelReader {
 	// Global Variables
-	public String path;
-	public FileInputStream fis = null;
+	private String path;
+	private FileInputStream fis = null;
 	private XSSFWorkbook workbook = null;
 	private XSSFSheet sheet = null;
 	private XSSFRow row = null;
@@ -59,5 +59,21 @@ public class ExcelReader {
 			return null;
 		// -------------------------------------
 
+	}
+
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
+
+	public FileInputStream getFis() {
+		return fis;
+	}
+
+	public void setFis(FileInputStream fis) {
+		this.fis = fis;
 	}
 }

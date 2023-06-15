@@ -37,7 +37,7 @@ public class CorrectTotalPrice {
 	// 1. Open link http://automationpractice.com/index.php
 	@BeforeMethod
 	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+		driver = BrowserFactory.launchBrowser();
 	}
 
 	@Test
@@ -89,6 +89,6 @@ public class CorrectTotalPrice {
 	// Closing browser
 	@AfterMethod
 	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+		BrowserFactory.closeBrowser();
 	}
 }

@@ -44,8 +44,7 @@ public class BasePage {
 
 	public double convertStringToDouble(WebElement element) {
 		String stringElement = element.getText().substring(1);
-		double doubleElement = Double.parseDouble(stringElement);
-		return doubleElement;
+		return Double.parseDouble(stringElement);
 	}
 
 	public void waitForElement(WebDriver driver, WebElement element) {

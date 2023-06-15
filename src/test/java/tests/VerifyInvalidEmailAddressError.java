@@ -26,7 +26,7 @@ public class VerifyInvalidEmailAddressError {
 	// 1. Open link
 	@BeforeMethod
 	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+		driver = BrowserFactory.launchBrowser();
 	}
 
 	@Test
@@ -47,7 +47,7 @@ public class VerifyInvalidEmailAddressError {
 	// Closing browser
 	@AfterMethod
 	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+		BrowserFactory.closeBrowser();
 	}
 
 }

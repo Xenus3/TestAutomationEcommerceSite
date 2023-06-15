@@ -25,7 +25,7 @@ public class WishListWorksAfterLogin {
 	//1. Open link http://automationpractice.com/index.php
 	@BeforeMethod
 	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+		driver = BrowserFactory.launchBrowser();
 	}
 
 	@Test
@@ -50,6 +50,6 @@ public class WishListWorksAfterLogin {
 
 	@AfterMethod
 	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+		BrowserFactory.closeBrowser();
 	}
 }

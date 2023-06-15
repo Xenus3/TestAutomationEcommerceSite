@@ -40,7 +40,7 @@ public class BuyOrderFunctionality {
 	// 1. Open link http://automationpractice.com/index.php
 	@BeforeMethod
 	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+		driver = BrowserFactory.launchBrowser();
 	}
 
 	// The actual Test
@@ -100,7 +100,7 @@ public class BuyOrderFunctionality {
 	// Closing browser
 	@AfterMethod
 	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+		BrowserFactory.closeBrowser();
 	}
 
 }

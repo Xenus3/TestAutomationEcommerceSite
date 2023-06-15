@@ -32,7 +32,7 @@ public class UserRegistrationProcess {
 	// Starting browser and navigating to website
 	@BeforeMethod
 	public void StartBrowser() {
-		driver = BrowserFactory.LaunchBrowser();
+		driver = BrowserFactory.launchBrowser();
 	}
 
 	@Test
@@ -92,6 +92,6 @@ public class UserRegistrationProcess {
 	// Closing browser
 	@AfterMethod
 	public void CloseBrowser() {
-		BrowserFactory.CloseBrowser();
+		BrowserFactory.closeBrowser();
 	}
 }
