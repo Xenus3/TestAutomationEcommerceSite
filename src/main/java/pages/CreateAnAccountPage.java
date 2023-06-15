@@ -81,7 +81,7 @@ public class CreateAnAccountPage extends BasePage {
 		Address_LastName_Field.sendKeys(aLastName);
 	}
 	
-	public void fillAddressCompany_Field(String Company) {
+	public void fillAddressCompanyField(String Company) {
 		Address_Company_Field.sendKeys(Company);
 	}
 

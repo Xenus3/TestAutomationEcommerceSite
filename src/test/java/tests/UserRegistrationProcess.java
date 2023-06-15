@@ -64,17 +64,17 @@ public class UserRegistrationProcess {
 
 		CreateAnAccountPage CreateAcc = PageFactory.initElements(driver, CreateAnAccountPage.class);
 		// 5. Enter your Personal Information, Address and Contact info.
-		CreateAcc.Click_Mr_RadioButton();
-		CreateAcc.Fill_FirstName_Field(FirstName);
-		CreateAcc.Fill_LastName_Field(LastName);
-		CreateAcc.Fill_Password_Field(Password);
-		CreateAcc.SelectDay_Selection(day);
-		CreateAcc.SelectMonth_Selection(month);
-		CreateAcc.SelectYear_Selection(year);
-		CreateAcc.Click_Newsletter_CheckBox();
-		CreateAcc.Click_SpecialOffer_CheckBox();
-		CreateAcc.Fill_Address_Company_Field(Company);
-		CreateAcc.Fill_Address1_Field(Address);
+		CreateAcc.clickMrRadioButton();
+		CreateAcc.fillFirstNameField(FirstName);
+		CreateAcc.fillLastNameField(LastName);
+		CreateAcc.fillPasswordField(Password);
+		CreateAcc.selectDaySelection(day);
+		CreateAcc.selectMonthSelection(month);
+		CreateAcc.selectYearSelection(year);
+		CreateAcc.clickNewsletterCheckBox();
+		CreateAcc.clickSpecialOfferCheckBox();
+		CreateAcc.fillAddressCompanyField(Company);
+		CreateAcc.fillAddress1Field(Address);
 		CreateAcc.fillCityField(City);
 		CreateAcc.selectStateField(State);
 		CreateAcc.fillZipCodeField(ZipCode);
