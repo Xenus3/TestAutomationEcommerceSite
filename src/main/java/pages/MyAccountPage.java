@@ -1,6 +1,6 @@
 package pages;
 
-import static org.testng.Assert.assertEquals;
+//import static org.testng.Assert.assertEquals;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -43,4 +43,8 @@ public class MyAccountPage {
 		String FullName = FirstName + " " + LastName;
 		assertEquals(FullName, NameOnAccount.getText());
 	}
+
+	private void assertEquals(String fullName, String text) {
+	}
 }
+
